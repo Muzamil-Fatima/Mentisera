@@ -11,13 +11,15 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/find-consultant" element={<FindConsultant />} />
-        <Route path="/how-it-works" element={<HowWork />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/pricing" element={<Price />} />
-      </Routes>
+      <div className="pt-24">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/find-consultant" element={<FindConsultant />} />
+          <Route path="/how-it-works" element={<HowWork />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/pricing" element={<Price />} />
+        </Routes>
+      </div>
       <hr className="h-30 opacity-70 " />
       <Footer />
     </div>
@@ -25,4 +27,3 @@ function App() {
 }
 
 export default App;
- 
