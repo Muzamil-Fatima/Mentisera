@@ -12,7 +12,6 @@ const Footer = () => {
             verified by the MENTISERA TEAM.
           </p>
           <div>
-            
             {/* <a href=""></a> */}
             {/* <a href=""></a> */}
             {/* <a href=""></a> */}
@@ -48,10 +47,11 @@ const Footer = () => {
         </div>
       </div>
 
-      <hr  className="opacity-70"/>
-      <div className="flex justify-center items-center flex-col">
+      <hr className="opacity-30" />
+      <div className="flex justify-center items-center flex-col space-y-2 p-6 text-sm opacity-75">
         <p>
-          A subsidiary of the MENTISERA EdTech Ecosystem. All rights reserved.
+          A subsidiary of the <span className="font-medium">MENTISERA EdTech</span> Ecosystem. All
+          rights reserved.
         </p>
         <p>&copy; 2026 MENTISERA. All rights reserved.</p>
       </div>

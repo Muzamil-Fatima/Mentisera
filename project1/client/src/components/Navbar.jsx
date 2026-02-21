@@ -29,17 +29,17 @@ const Navbar = () => {
             </p>
           </div>
         </div>
-        <ul className="flex space-x-8 items-center cursor-pointer">
-          <li>
+        <ul className="flex space-x-8 items-center cursor-pointer ">
+          <li className="opacity-70 hover:opacity-100">
             <Link to="/find-consultant">Find a Consultant</Link>
           </li>
-          <li>
+          <li className="opacity-70 hover:opacity-100">
             <Link to="/how-it-works">How it Works</Link>
           </li>
-          <li>
+          <li className="opacity-70 hover:opacity-100">
             <Link to="/pricing">Pricing</Link>
           </li>
-          <li>
+          <li className="opacity-70 hover:opacity-100">
             <Link to="/blog">Blog</Link>
           </li>
         </ul>

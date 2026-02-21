@@ -11,7 +11,8 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="pt-24">
+      <div className="pt-14.5">
+      <hr className="opacity-30"/>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/find-consultant" element={<FindConsultant />} />
@@ -20,7 +21,7 @@ function App() {
           <Route path="/pricing" element={<Price />} />
         </Routes>
       </div>
-      <hr className="h-30 opacity-70 " />
+      <hr className="h-30 opacity-30 " />
       <Footer />
     </div>
   );
