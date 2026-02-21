@@ -6,6 +6,7 @@ function App() {
   return (
     <div>
       <Navbar />
+      <hr className="h-30 opacity-70 " />
       <Footer />
     </div>
   );
