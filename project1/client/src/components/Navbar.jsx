@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -30,10 +30,18 @@ const Navbar = () => {
           </div>
         </div>
         <ul className="flex space-x-8 items-center cursor-pointer">
-          <li>Find a Consultant</li>
-          <li>How it Works</li>
-          <li>Pricing</li>
-          <li>Blog</li>
+          <li>
+            <Link to="/find-consultant">Find a Consultant</Link>
+          </li>
+          <li>
+            <Link to="/how-it-works">How it Works</Link>
+          </li>
+          <li>
+            <Link to="/pricing">Pricing</Link>
+          </li>
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
         </ul>
       </div>
       <div className="space-x-4">

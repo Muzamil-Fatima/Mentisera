@@ -12,9 +12,10 @@ const Footer = () => {
             verified by the MENTISERA TEAM.
           </p>
           <div>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
+            
+            {/* <a href=""></a> */}
+            {/* <a href=""></a> */}
+            {/* <a href=""></a> */}
           </div>
         </div>
         <div>
