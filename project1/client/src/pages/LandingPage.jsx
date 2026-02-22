@@ -1,4 +1,6 @@
 import React from "react";
+import WhyConsultants from "./WhyConsultants";
+import TopConsultants from "./TopConsultants";
 
 const LandingPage = () => {
   return (
@@ -60,6 +62,9 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      <div className="mt-16"></div>
+      <WhyConsultants />
+      <TopConsultants />
     </div>
   );
 };

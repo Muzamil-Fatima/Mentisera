@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="pt-14.5">
+      <div className="pt-20">
       <hr className="opacity-30"/>
         <Routes>
           <Route path="/" element={<LandingPage />} />

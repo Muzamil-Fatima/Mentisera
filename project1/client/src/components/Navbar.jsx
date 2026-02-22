@@ -23,7 +23,9 @@ const Navbar = () => {
         <div>
           <img src="" alt="" />
           <div>
-            <h1 className="text-xl font-bold">Consultants</h1>
+            <h1 className="text-xl font-bold cursor-pointer">
+              <Link to="/">Consultants</Link>
+            </h1>
             <p className="text-sm opacity-70">
               Empowering Minds, Enabling Futures.
             </p>
