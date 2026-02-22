@@ -48,7 +48,7 @@ const Footer = () => {
       </div>
 
       <hr className="opacity-30" />
-      <div className="flex justify-center items-center flex-col space-y-2 p-6 text-sm opacity-75">
+      <div className="flex justify-center items-center flex-col space-y-2 p-6 text-lg opacity-75">
         <p>
           A subsidiary of the <span className="font-medium">MENTISERA EdTech</span> Ecosystem. All
           rights reserved.
