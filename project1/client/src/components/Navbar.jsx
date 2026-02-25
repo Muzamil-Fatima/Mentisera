@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -50,9 +50,12 @@ const Navbar = () => {
         <button className="hover:bg-blue-600 rounded-xl hover:text-white px-4 p-2">
           Log In
         </button>
-        <button className="bg-blue-600 rounded-xl p-2.5 px-4 text-white ">
+        <NavLink
+          to="/as-consultant"
+          className="bg-blue-600 rounded-xl p-2.5 px-4 text-white "
+        >
           Become a Consultant
-        </button>
+        </NavLink>
       </div>
     </div>
   );
