@@ -1,3 +1,4 @@
+import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
 import SideBar from "./components/SideBar";
 import OverView from "./pages/home/OverView";
@@ -5,7 +6,6 @@ import Project from "./pages/Projects/Project";
 import Performance from "./pages/Performance";
 import Verification from "./pages/verification/Verification";
 import Setting from "./pages/settings/Setting";
-import { Routes, Route, Navigate } from "react-router-dom";
 function App() {
   return (
     <div>

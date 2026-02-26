@@ -1,5 +1,5 @@
 import React from "react";
-
+import { NavLink } from "react-router-dom";
 const SideBar = () => {
   const menuItems = [
     {
@@ -99,7 +99,7 @@ const SideBar = () => {
     <div>
       <div>
         <h1 className="text-xl font-bold cursor-pointer">
-          <Link to="/">Consultants</Link>
+          Consultants
         </h1>
         <p className="text-sm opacity-70">
           Empowering Minds, Enabling Futures.
