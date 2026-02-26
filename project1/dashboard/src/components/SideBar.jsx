@@ -96,23 +96,23 @@ const SideBar = () => {
     },
   ];
   return (
-    <div>
+    <div className="bg-blue-950 text-white w-64 h-screen p-6 space-y-6">
       <div>
-        <h1 className="text-xl font-bold cursor-pointer">
-          Consultants
-        </h1>
+        <h1 className="text-xl font-bold cursor-pointer">Consultants</h1>
         <p className="text-sm opacity-70">
           Empowering Minds, Enabling Futures.
         </p>
       </div>
       <div>
         <ul>
-          {menuItems.map((item) => {
-            <NavLink to={item.path}>
-              {item.svg}
-              <span className="ml-2">{item.name}</span>
-            </NavLink>;
-          })}
+          {menuItems.map((item) => (
+            <li key={item.name} className="mb-4">
+              <NavLink to={item.path}>
+                {item.svg}
+                <span className="ml-2">{item.name}</span>
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

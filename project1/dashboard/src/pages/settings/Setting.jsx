@@ -1,8 +1,11 @@
 import React from 'react'
+import Page from '../../components/Page'
 
 const Setting = () => {
   return (
-    <div>Setting</div>
+    <div>Setting
+      <Page />
+    </div>
   )
 }
 

@@ -1,8 +1,11 @@
 import React from 'react'
+import Page from '../components/Page'
 
 const Performance = () => {
   return (
-    <div>Performance</div>
+    <div>
+      <Page />
+    </div>
   )
 }
 
