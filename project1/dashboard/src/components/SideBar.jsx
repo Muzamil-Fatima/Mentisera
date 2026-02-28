@@ -7,6 +7,7 @@ const SideBar = () => {
       path: "/overview",
       svg: (
         <svg
+        class="w-6 h-6 text-white"
           viewBox="0 0 32 32"
           enable-background="new 0 0 32 32"
           xml:space="preserve"
@@ -107,7 +108,7 @@ const SideBar = () => {
         <ul>
           {menuItems.map((item) => (
             <li key={item.name} className="mb-4">
-              <NavLink to={item.path}>
+              <NavLink to={item.path} className={"flex"}>
                 {item.svg}
                 <span className="ml-2">{item.name}</span>
               </NavLink>

@@ -9,19 +9,19 @@ import Setting from "./pages/settings/Setting";
 function App() {
   return (
     <div>
-      <div className="flex flex-h-screen">
+      <div className="flex h-screen">
         <SideBar />
-      </div>
-      <div className="flex-1">
-        <Routes>
-          <Route path="/overview" element={<OverView />} />
-          <Route path="/projects" element={<Project />} />
-          <Route path="/performance" element={<Performance />} />
-          <Route path="/verification" element={<Verification />} />
-          <Route path="/settings" element={<Setting />} />
-          <Route path="/" element={<Navigate to="/overview" />} />
-          <Route path="*" element={<Navigate to="/overview" />} />
-        </Routes>
+        <div className="flex-1 ">
+          <Routes>
+            <Route path="/overview" element={<OverView />} />
+            <Route path="/projects" element={<Project />} />
+            <Route path="/performance" element={<Performance />} />
+            <Route path="/verification" element={<Verification />} />
+            <Route path="/settings" element={<Setting />} />
+            <Route path="/" element={<Navigate to="/overview" />} />
+            <Route path="*" element={<Navigate to="/overview" />} />
+          </Routes>
+        </div>
       </div>
     </div>
   );
