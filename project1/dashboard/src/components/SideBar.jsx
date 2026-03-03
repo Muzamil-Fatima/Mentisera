@@ -79,7 +79,7 @@ const SideBar = () => {
           />
         </svg>
       ),
-    },
+    }
   ];
   return (
     <div className="bg-blue-950 text-white w-64 h-full p-2 flex flex-col justify-between">

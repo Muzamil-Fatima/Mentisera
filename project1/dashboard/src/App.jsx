@@ -8,6 +8,7 @@ import Verification from "./pages/verification/Verification";
 import Setting from "./pages/settings/Setting";
 import Search from "./components/Search";
 import Profile from "./components/Profile";
+import WhatsApp from "./components/WhatsApp";
 function App() {
   return (
     <div>
@@ -31,6 +32,7 @@ function App() {
               <Route path="*" element={<Navigate to="/overview" />} />
             </Routes>
           </div>
+          <WhatsApp />
         </div>
       </div>
     </div>
