@@ -13,7 +13,7 @@ function App() {
         <SideBar />
         <div className="flex-1 ">
           <Routes>
-            <Route path="/overview" element={<OverView />} />
+            <Route path="/home" element={<OverView />} />
             <Route path="/projects" element={<Project />} />
             <Route path="/performance" element={<Performance />} />
             <Route path="/verification" element={<Verification />} />
