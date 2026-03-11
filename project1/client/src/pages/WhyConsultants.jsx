@@ -74,18 +74,18 @@ const WhyConsultants = () => {
     },
   ];
   return (
-    <div className="pt-16 pb-16">
-      <h2 className="text-4xl font-bold text-center">Why Consultants?</h2>
-      <p className="text-lg font-normal opacity-75 text-center mt-4 mb-12">
+    <div className="py-12 md:py-16">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center">Why Consultants?</h2>
+      <p className="text-base md:text-lg  font-normal opacity-75 text-center mt-4 mb-12 px-4">
         A seamless platform designed for trust, efficiency, and measurable
         results.
       </p>
-      <div className="grid grid-cols-3 space-x-8 ml-8 mb-16">
+      <div className="grid grid-cols-1 md:grid-col-2 lg:grid-col-3 gap-8 px-6 mb-16">
         {benefits.map((benefits, index) => {
           return (
             <div
               key={index}
-              className="flex flex-col items-center justify-center gap-4 p-6  rounded-lg shadow-md hover:shadow-lg transition"
+              className="flex flex-col items-center justify-center gap-4 p-6 text-center  rounded-lg shadow-md hover:shadow-lg transition"
             >
               <div className="flex justify-center mb-4 bg-blue-600 p-4 rounded-full ">
                 {benefits.svg}
