@@ -5,17 +5,17 @@ import TopConsultants from "./TopConsultants";
 const LandingPage = () => {
   return (
     <div>
-      <div className=" pt-28 pb-28 gap-8 m-auto bg-[#e9effc]">
-        <div className="w-9/12 flex flex-col gap-8 m-auto pl-10 justify-center items-center">
-          <h1 className="text-7xl font-bold ">
+      <div className=" pt-20 md:pt-28 pb-2m md:pb-28 gap-8 m-auto bg-[#e9effc]">
+        <div className="max-w-6xl mx-auto px-6 flex flex-col gap-8 items-center text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold leading-tight">
             Find Pakistan’s #1 Verified Trainers & Consultants
           </h1>
-          <p className="text-2xl opacity-70 text-center">
+          <p className="text-base sm:text-lg md:text-xl opacity-70 max-w-3xl">
             Empowering Minds, Enabling Futures. One platform for every expert,
             trusted by leading organizations.
           </p>
-          <div className="space-x-2 flex items-center">
-            <div className="relative w-full flex-1">
+          <div className="flex sm:flex-row gap-4 w-full max-w-3xl ">
+            <div className="relative w-full">
               {/* Search Icon */}
               <svg
                 className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"
@@ -34,7 +34,7 @@ const LandingPage = () => {
               />
             </div>
 
-            <button className="flex items-center gap-2 bg-blue-600 rounded-xl px-6 py-2.5 text-white hover:bg-blue-700 transition whitespace-nowrap justify-center">
+            <button className="flex items-center gap-2 bg-blue-600 rounded-xl px-6 py-3 text-white hover:bg-blue-700 transition whitespace-nowrap">
               <span className="whitespace-nowrap">Find a Consultant</span>
 
               <svg

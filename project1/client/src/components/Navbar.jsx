@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <div
       className={`
-    fixed top-0 left-0 w-full flex justify-between px-4 md:px-10 py-3  text-sm font-medium transition-all duration-300 ${isScrolled ? " bg-white opacity-70 shadow-md" : "bg-transparent opacity-100"}
+    fixed top-0 left-0 w-full flex justify-between z-50 px-4 md:px-10 py-3  text-sm font-medium transition-all duration-300 ${isScrolled ? " bg-white opacity-70 shadow-md" : "bg-transparent opacity-100"}
   `}
     >
       <div className="flex justify-between space-x-4">
@@ -64,33 +64,37 @@ const Navbar = () => {
           Become a Consultant
         </NavLink>
       </div>
-      {menuOpen && (
-        <div className="absolute top-16 left-0 w-full bg-white shadow-md md:hidden">
-          <ul className="flex flex-col items-center space-y-4 py-6">
-            <li>
-              <Link to="/find-consultant">Find a Consultant</Link>
-            </li>
-            <li>
-              <Link to="/how-it-works">How it Works</Link>
-            </li>
-            <li>
-              <Link to="/pricing">Pricing</Link>
-            </li>
-            <li>
-              <Link to="/blog">Blog</Link>
-            </li>
+      <div
+       className={`fixed top-0 right-0 h-screen w-64 bg-white shadow-lg z-40 transform transition-transform duration-300 md:hidden
+${menuOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
+        <ul className="flex flex-col items-start space-y-6 p-6 mt-10">
+          <li>
+            <Link to="/find-consultant">Find a Consultant</Link>
+          </li>
 
-            <button className="border px-4 py-2 rounded-lg">Log In</button>
+          <li>
+            <Link to="/how-it-works">How it Works</Link>
+          </li>
 
-            <NavLink
-              to="/as-consultant"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg"
-            >
-              Become a Consultant
-            </NavLink>
-          </ul>
-        </div>
-      )}
+          <li>
+            <Link to="/pricing">Pricing</Link>
+          </li>
+
+          <li>
+            <Link to="/blog">Blog</Link>
+          </li>
+
+          <button className="border px-4 py-2 rounded-lg">Log In</button>
+
+          <NavLink
+            to="/as-consultant"
+            className="bg-blue-600 text-white px-4 py-2 rounded-lg"
+          >
+            Become a Consultant
+          </NavLink>
+        </ul>
+      </div>
     </div>
   );
 };
