@@ -8,6 +8,11 @@ import HowWork from "./pages/HowWork";
 import Blog from "./pages/Blog";
 import Price from "./pages/Price";
 import AsConsultant from "./pages/BecomeConsultants/AsConsultant";
+import Login from "./pages/Auth/Login";
+import Signup from "./pages/Auth/SignUp";
+import Forget from "./pages/Auth/Forget";
+import VerifyEmail from "./pages/Auth/VerifyEmail";
+import ResetPassword from "./pages/Auth/ResetPassword";
 function App() {
   return (
     <div>
@@ -16,6 +21,11 @@ function App() {
         <hr className="opacity-30" />
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/forget-password" element={<Forget />} />
+          <Route path="/verify-email" element={<VerifyEmail />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/find-consultant" element={<FindConsultant />} />
           <Route path="/how-it-works" element={<HowWork />} />
           <Route path="/blog" element={<Blog />} />
