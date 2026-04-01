@@ -1,40 +1,21 @@
 import React from "react";
 
 const StatBoxDesign = ({ title, number, subtitle, icon }) => (
-  <div className="bg-white text-black rounded-xl p-4 flex flex-col justify-between h-full shadow-md w-full">
+  <div className="bg-white text-black opacity-75 rounded-xl p-5 flex flex-col justify-between h-full shadow-md w-full border border-gray-300">
     <div className="flex justify-between items-center">
-      <div className="flex items-center gap-2">
-        <h3 className="text-lg font-bold">{title}</h3>
-        {icon}
-      </div>
+      <h3 className="font-normal">{title}</h3>
+      {icon}
     </div>
-      <p className="text-2xl font-semibold">{number}</p>
-    <div className="flex">
-      <svg
-        width="14px"
-        height="14px"
-        viewBox="0 0 400 400"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+    <p className="text-2xl font-semibold">{number}</p>
+    <div className="flex mt-1.5">
+      <svg fill="#008000" width="14px" height="18px" viewBox="0 0 36 36">
         <path
-          d="M49 200.913C99.7842 198.157 150.377 196.78 200.778 196.78C276.38 196.78 336.003 200.913 351.598 200.913"
-          stroke="#000000"
-          stroke-opacity="0.9"
-          stroke-width="16"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M297.858 148C311.416 151.811 342.206 190.498 350.385 194.54C358.564 198.581 323.305 244.831 307.119 253"
-          stroke="#000000"
-          stroke-opacity="0.9"
-          stroke-width="16"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+          d="M27.66,15.61,18,6,8.34,15.61A1,1,0,1,0,9.75,17L17,9.81V28.94a1,1,0,1,0,2,0V9.81L26.25,17a1,1,0,0,0,1.41-1.42Z"
+          class="clr-i-outline clr-i-outline-path-1"
+        ></path>
+        <rect x="0" y="0" width="36" height="36" fill-opacity="0" />
       </svg>
-      <p className="text-green-500 mt-2">{subtitle}</p>
+      <p className="text-gray-500 text-sm ">{subtitle}</p>
     </div>
   </div>
 );
