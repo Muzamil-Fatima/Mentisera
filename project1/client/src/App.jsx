@@ -1,4 +1,5 @@
 import "./App.css";
+import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
@@ -16,11 +17,11 @@ import ResetPassword from "./pages/Auth/ResetPassword";
 function App() {
   return (
     <div>
+      <Toaster position="top-right" reverseOrder={false} />
       <Navbar />
       <div className="pt-20">
         <hr className="opacity-30" />
         <Routes>
-          
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />

@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema(
     name: { type: String, required: [true, "Name is required"] },
     password: {
       type: String,
-     
+
       minlength: [6, "Password must be 6 character long"],
     },
     email: {
@@ -37,11 +37,11 @@ const userSchema = new mongoose.Schema(
     status: { type: String, enum: ["Finished", "Active"], default: "Active" },
     role: {
       type: String,
-      enum: ["patient", "doctor", "admin", "hospital", "clinic"],
-      default: "patient",
+      enum: ["user", "consultant", "admin"],
+      default: "user",
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 // userSchema.plugin(AutoIncrement, { inc_field: "userId", start_seq: 1 });
 // create Model

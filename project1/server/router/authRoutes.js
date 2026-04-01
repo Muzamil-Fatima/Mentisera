@@ -13,7 +13,7 @@ import {
   resetPassword,
   // resendVerification,
   resendResetPasswordOTP,
-} from "../controllers/authController.js";
+} from "../controller/authController.js";
 const router = express.Router();
 
 // routes
@@ -29,7 +29,7 @@ router.post("/resend-reset-otp", resendResetPasswordOTP);
 // Google OAuth routes
 router.get(
   "/google",
-  passport.authenticate("google", { scope: ["profile", "email"] })
+  passport.authenticate("google", { scope: ["profile", "email"] }),
 );
 router.get(
   "/google/callback",
@@ -47,7 +47,7 @@ router.get(
       console.log("Google Login error:", error);
       res.redirect(`${process.env.FRONTEND_URL}/login?error=google_failed`);
     }
-  }
+  },
 );
 // Current user info
 router.get("/me", protect, (req, res) => {
