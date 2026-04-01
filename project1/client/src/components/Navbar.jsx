@@ -59,8 +59,9 @@ const Navbar = () => {
       </div>
       <div className="hidden md:flex space-x-4">
         <Link
-        to="/login"
-        className="hover:bg-blue-600 rounded-xl hover:text-white px-4 p-2">
+          to="/login"
+          className="hover:bg-blue-600 rounded-xl hover:text-white px-4 p-2"
+        >
           Log In
         </Link>
         <NavLink

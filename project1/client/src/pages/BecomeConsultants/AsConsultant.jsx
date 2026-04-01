@@ -1,7 +1,7 @@
 import React from "react";
 import PersonalInfo from "./PersonalInfo";
 import Expertise from "./Expertise";
-
+import ProfessionalProfile from "./ProfessionalProfile";
 const AsConsultant = () => {
   return (
     <div>
