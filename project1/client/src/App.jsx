@@ -20,6 +20,7 @@ function App() {
       <div className="pt-20">
         <hr className="opacity-30" />
         <Routes>
+          
           <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
