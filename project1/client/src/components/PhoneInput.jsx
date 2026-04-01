@@ -4,7 +4,7 @@ import "react-phone-input-2/lib/style.css";
 const PhoneInput = ({ value, onChange, label = "Phone" }) => {
   return (
     <div className="flex flex-col">
-      <label className="mb-2 text-gray-700">{label}</label>
+      <label className="mb-2 text-sm font-medium">{label}</label>
       <PhoneInputLib
         country="pk"
         inputStyle={{
