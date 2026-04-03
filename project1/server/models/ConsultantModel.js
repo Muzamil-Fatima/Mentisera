@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const consultantSchema = new mongoose.Schema(
+const consultantModel = new mongoose.Schema(
   {
     //  Personal Info
     fullName: {
@@ -66,9 +66,9 @@ const consultantSchema = new mongoose.Schema(
       default: false,
     },
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
-const Consultant = mongoose.model("Consultant", consultantSchema);
+const Consultant = mongoose.model("Consultant", consultantModel);
 
 export default Consultant;
