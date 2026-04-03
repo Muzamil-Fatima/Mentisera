@@ -1,19 +1,74 @@
 import mongoose from "mongoose";
 
-const consultantApplicationSchema = new mongoose.Schema({
-  // Personal Information
-  user: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
+const consultantSchema = new mongoose.Schema(
+  {
+    //  Personal Info
+    fullName: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
+    },
+    phone: {
+      type: String,
+      required: true,
+    },
+    location: {
+      type: String,
+      required: true,
+    },
+
+    //  Professional Profile
+    profileHeadline: {
+      type: String,
+      required: true,
+      maxlength: 100,
+    },
+    bio: {
+      type: String,
+      required: true,
+      maxlength: 500,
+    },
+    linkedin: {
+      type: String,
+      default: "",
+    },
+    portfolio: {
+      type: String,
+      default: "",
+    },
+
+    // Expertise
+    expertise: [
+      {
+        type: String,
+      },
+    ], // array because comma-separated input
+    experience: {
+      type: String, // "10+ years"
+      required: true,
+    },
+
+    //  Extra (VERY IMPORTANT for real app)
+    status: {
+      type: String,
+      enum: ["pending", "approved", "rejected"],
+      default: "pending",
+    },
+
+    isVerified: {
+      type: Boolean,
+      default: false,
+    },
   },
-  userPhone: { type: String, required: true },
-  userLocation: { type: String, required: true },
-  // Professional Profile
-  userProfileHeading: { type: String, required: true },
-  userShortBio: { type: String, required: true },
-  userLinkedInUrl: { type: String },
-  userPortfolioUrl: { type: String },
-  // Expertise
-  userExpertise: [{ type: String, required: true }],
-  userExperience: { type: Number, required: true },
-});
+  { timestamps: true }
+);
+
+const Consultant = mongoose.model("Consultant", consultantSchema);
+
+export default Consultant;
