@@ -1,5 +1,5 @@
-import 'dotenv/config'
-import "./config/passport.js"
+import "dotenv/config";
+import "./config/passport.js";
 import passport from "passport";
 import express from "express";
 import cors from "cors";
@@ -9,6 +9,7 @@ import connectDB from "./config/database.js";
 // import userRoutes from "./router/userRoutes.js";
 import authRouter from "./router/authRoutes.js";
 import { removeUnverifiedAccount } from "./auto/removeUnverifiedAccounts.js";
+import consultantRoutes from "./router/ConsultantRouter.js";
 
 //Configuration
 connectDB();
@@ -17,7 +18,6 @@ connectDB();
 const app = express();
 removeUnverifiedAccount();
 app.use(passport.initialize());
-
 
 //Middleware
 app.use(express.json());
@@ -31,12 +31,13 @@ app.use(
     origin: [process.env.FRONTEND_URL],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
-  })
+  }),
 );
 
 // Routes
 // app.use("/api/user", userRoutes);
 app.use("/api/auth", authRouter);
+app.use("/api/consultant", consultantRoutes);
 
 // server listen
 const port = process.env.PORT || 8000;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProfessionalProfile = () => {
+const ProfessionalProfile = ({ formData, setFormData }) => {
   return (
     <div>
       <h4 className="text-xl font-medium mt-4">ProfessionalProfile</h4>
@@ -9,6 +9,10 @@ const ProfessionalProfile = () => {
           Profile Headline
         </label>
         <input
+          value={formData.profileHeadline}
+          onChange={(e) => {
+            setFormData({ ...formData, profileHeadline: e.target.value });
+          }}
           className="border border-gray-300 rounded-md p-2 w-full mt-2"
           type="text"
           id="profileHeadline"
@@ -18,6 +22,10 @@ const ProfessionalProfile = () => {
           Short Bio
         </label>
         <textarea
+          value={formData.bio}
+          onChange={(e) => {
+            setFormData({ ...formData, bio: e.target.value });
+          }}
           className="border border-gray-300 rounded-md p-2 w-full mt-2"
           name=""
           id=""
@@ -33,6 +41,10 @@ const ProfessionalProfile = () => {
               LinkedIn Profile URL (Optional)
             </label>
             <input
+              value={formData.linkedin}
+              onChange={(e) => {
+                setFormData({ ...formData, linkedin: e.target.value });
+              }}
               type="text"
               placeholder="https://linkedin.com/in/yourprofile"
               className="border border-gray-300 rounded-md p-2 w-full"
@@ -45,6 +57,10 @@ const ProfessionalProfile = () => {
               Website/Portfolio URL (Optional)
             </label>
             <input
+              value={formData.portfolio}
+              onChange={(e) => {
+                setFormData({ ...formData, portfolio: e.target.value });
+              }}
               type="text"
               placeholder="https://yourportfolio.com"
               className="border border-gray-300 rounded-md p-2 w-full"

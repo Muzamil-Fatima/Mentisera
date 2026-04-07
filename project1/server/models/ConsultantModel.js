@@ -44,17 +44,14 @@ const consultantModel = new mongoose.Schema(
     },
 
     // Expertise
-    expertise: [
-      {
-        type: String,
-      },
-    ], // array because comma-separated input
+    expertise: {
+      type: String,
+    },
     experience: {
       type: String, // "10+ years"
       required: true,
     },
 
-    //  Extra (VERY IMPORTANT for real app)
     status: {
       type: String,
       enum: ["pending", "approved", "rejected"],

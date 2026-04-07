@@ -1,7 +1,7 @@
 import React from "react";
 import PhoneInput from "../../components/PhoneInput";
 
-const PersonalInfo = () => {
+const PersonalInfo = ({ formData, setFormData }) => {
   return (
     <div>
       <h3 className="text-xl font-medium mt-4">Personal Information</h3>
@@ -13,6 +13,10 @@ const PersonalInfo = () => {
             Full Name
           </label>
           <input
+            value={formData.fullName}
+            onChange={(e) => {
+              setFormData({ ...formData, fullName: e.target.value });
+            }}
             type="text"
             id="fullName"
             placeholder="e.g., Dr.Aisha Khan"
@@ -26,6 +30,10 @@ const PersonalInfo = () => {
             Email Address
           </label>
           <input
+            value={formData.email}
+            onChange={(e) => {
+              setFormData({ ...formData, email: e.target.value });
+            }}
             type="text"
             id="email"
             placeholder="you@example.com"
@@ -35,7 +43,10 @@ const PersonalInfo = () => {
 
         {/* Phone */}
         <div className="flex flex-col">
-          <PhoneInput />
+          <PhoneInput
+            value={formData.phone}
+            onChange={(value) => setFormData({ ...formData, phone: value })}
+          />
         </div>
 
         {/* Location */}
@@ -44,6 +55,10 @@ const PersonalInfo = () => {
             Location
           </label>
           <input
+            value={formData.location}
+            onChange={(e) => {
+              setFormData({ ...formData, location: e.target.value });
+            }}
             type="text"
             id="location"
             placeholder="e.g., Lahore, Pakistan"
