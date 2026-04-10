@@ -10,7 +10,7 @@ import connectDB from "./config/database.js";
 import authRouter from "./router/authRoutes.js";
 import { removeUnverifiedAccount } from "./auto/removeUnverifiedAccounts.js";
 import consultantRoutes from "./router/ConsultantRouter.js";
-
+import adminRoutes from "./router/adminRoutes.js";
 //Configuration
 connectDB();
 
@@ -38,6 +38,7 @@ app.use(
 // app.use("/api/user", userRoutes);
 app.use("/api/auth", authRouter);
 app.use("/api/consultant", consultantRoutes);
+app.use("/api/admin", adminRoutes);
 
 // server listen
 const port = process.env.PORT || 8000;
